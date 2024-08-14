@@ -78,7 +78,7 @@ const createContract = (req, res) => {
   
     db.query('SELECT percent FROM payment_plan WHERE id = ?', [payment_plan_id], (err, results) => {
       if (err) {
-        console.error('To\'lov rejasini olishda xato:', err);
+        console.error('Tolov rejasini olishda xato:', err);
         return res.status(500).json({ error: 'Ichki server xatosi' });
       }
       if (results.length === 0) {
